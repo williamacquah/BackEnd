@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs")%>
+<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="/" class="nav-link px-2 text-secondary"><i class="fa-solid fa-blog"></i>AcquahBlogs</a></li>
+    </ul>
+
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+      <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+    </form>
+
+    <div class="text-end">
+        <a href="/login" class="btn btn-primary">LOGIN</a>
+        <a href="/register" class="btn btn-secondary">SIGN UP</a>
+    </div>
+  </div>
+  <div class="px-4 py-5 my-5 text-center">
+    <h2 class="display-5 fw-bold text-body-emphasis">Share your interests in your own style</h2>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Craft a distinctive and captivating blog effortlessly.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button onclick="window.location.href='/create'" type="button" class="btn btn-primary btn-lg px-4 gap-3">CREATE YOUR BLOG</button>
+      </div>
+    </div>
+  </div>
+<%- include("partials/footer.ejs")%>

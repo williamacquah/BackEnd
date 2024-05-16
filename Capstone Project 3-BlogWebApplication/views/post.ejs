@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs")%>
+<h1>Published Posts</h1>
+<div class="posts-container">
+    <% posts.forEach(post =>{%>
+        <div class="post">
+            <h2><%=post.postTitle%></h2>
+            <h2><%=post.postContent%></h2>
+            <h2><%=post.date%></h2>
+            <button onclick="window.location.href='/edit/<%= post.postID %>'" type="button" class="btn btn-primary btn-lg px-4 gap-3">Edit Post</button>
+            <form action="/delete/<%= post.postID %>" method="POST">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    <%});%>
+</div>
+<div><button onclick="window.location.href='/create'" type="button" class="btn btn-primary btn-lg px-4 gap-3">New Post</button></div>
+<%- include("partials/footer.ejs");%>
